@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
 
@@ -30,36 +31,8 @@ export default function Navbar() {
 
                 {/* Logo */}
 
-                <a
-                    href="#"
-                    className="
-                        flex
-                        items-center
-                        gap-2
-                    "
-                >
-
-                    <div className="
-                        flex
-                        h-9
-                        w-9
-                        items-center
-                        justify-center
-                        rounded-xl
-                        bg-indigo-600
-                        font-bold
-                        text-white
-                    ">
-                        S
-                    </div>
-
-                    <span className="
-                        text-lg
-                        font-bold
-                    ">
-                        SaaSify
-                    </span>
-
+                <a href="#" className="flex items-center gap-2">
+                    <img src={logo} width="180" alt="logo" />
                 </a>
 
 
@@ -118,14 +91,14 @@ export default function Navbar() {
                         text-sm
                         font-medium
                         text-slate-700
-                        hover:text-slate-900
+                        hover:text-blue-600
                     ">
                         Login
                     </button>
 
                     <button className="
                         rounded-xl
-                        bg-slate-900
+                        bg-blue-600
                         px-4
                         py-2.5
                         text-sm
@@ -194,7 +167,7 @@ export default function Navbar() {
                         <button className="
                             w-full
                             rounded-xl
-                            bg-slate-900
+                            bg-blue-600
                             py-3
                             text-sm
                             font-semibold

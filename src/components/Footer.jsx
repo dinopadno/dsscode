@@ -3,6 +3,7 @@ import {
     MapPin,
     Phone,
 } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
 
@@ -59,27 +60,7 @@ export default function Footer() {
                             "
                         >
 
-                            <div className="
-                                flex
-                                h-9
-                                w-9
-                                items-center
-                                justify-center
-                                rounded-xl
-                                bg-indigo-600
-                                font-bold
-                                text-white
-                            ">
-                                S
-                            </div>
-
-                            <span className="
-                                text-lg
-                                font-bold
-                                text-slate-900
-                            ">
-                                SaaSify
-                            </span>
+                           <img src={logo} width="120" alt="logo" />
 
                         </a>
 
@@ -108,12 +89,12 @@ export default function Footer() {
 
                             <div className="flex items-center gap-3">
                                 <Mail size={17} />
-                                hello@saasify.com
+                                info@dsscode.com
                             </div>
 
                             <div className="flex items-center gap-3">
                                 <Phone size={17} />
-                                +62 812 3456 7890
+                                +62 821 1866 8363
                             </div>
 
                             <div className="flex items-center gap-3">

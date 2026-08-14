@@ -4,7 +4,7 @@ const testimonials = [
     {
         name: "Andi Pratama",
         role: "Founder, Maju Jaya",
-        text: "Sebelumnya kami menggunakan banyak spreadsheet untuk mengelola bisnis. Setelah menggunakan SaaSify, semuanya jauh lebih terorganisir.",
+        text: "Sebelumnya kami menggunakan banyak spreadsheet untuk mengelola bisnis. Setelah menggunakan Inventory System (INVEST) dari dsscode, semuanya jauh lebih terorganisir.",
         initials: "AP",
     },
     {
