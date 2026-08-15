@@ -5,91 +5,60 @@ import {
 } from "lucide-react";
 import logo from "../assets/logo.png";
 
+const productLinks = [
+    "Fitur",
+    "Harga",
+    "Integrasi",
+    "Pembaruan",
+];
+
+const companyLinks = [
+    "Tentang Kami",
+    "Blog",
+    "Karier",
+    "Kontak",
+];
+
+const resourceLinks = [
+    "Pusat Bantuan",
+    "Dokumentasi",
+    "API",
+    "Komunitas",
+];
+
 export default function Footer() {
-
-    const productLinks = [
-        "Features",
-        "Pricing",
-        "Integrations",
-        "Changelog",
-    ];
-
-    const companyLinks = [
-        "About",
-        "Blog",
-        "Careers",
-        "Contact",
-    ];
-
-    const resourceLinks = [
-        "Help Center",
-        "Documentation",
-        "API",
-        "Community",
-    ];
-
     return (
         <footer className="border-t border-slate-200 bg-white">
 
-            <div className="
-                mx-auto
-                max-w-7xl
-                px-5
-                py-14
-                lg:px-8
-            ">
+            <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
 
-                <div className="
-                    grid
-                    grid-cols-1
-                    gap-10
-                    md:grid-cols-2
-                    lg:grid-cols-5
-                ">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
 
                     {/* Brand */}
 
                     <div className="lg:col-span-2">
 
-                        <a
-                            href="#"
-                            className="
-                                flex
-                                items-center
-                                gap-2
-                            "
-                        >
+                        <a href="#" className="flex items-center gap-2">
 
-                           <img src={logo} width="120" alt="logo" />
+                            <img src={logo} width="120" alt="logo" />
 
                         </a>
 
 
-                        <p className="
-                            mt-5
-                            max-w-sm
-                            text-sm
-                            leading-6
-                            text-slate-500
-                        ">
-                            A simple and powerful platform to help
-                            growing businesses manage their operations
-                            and grow faster.
+                        <p className="mt-5 max-w-sm text-sm leading-6 text-slate-500">
+                            Platform sederhana dan powerful untuk membantu
+                            bisnis Indonesia mengelola operasional dan
+                            berkembang lebih cepat.
                         </p>
 
 
                         {/* Contact */}
 
-                        <div className="
-                            mt-6
-                            space-y-3
-                            text-sm
-                            text-slate-500
-                        ">
+                        <div className="mt-6 space-y-3 text-sm text-slate-500">
 
                             <div className="flex items-center gap-3">
                                 <Mail size={17} />
-                                info@dsscode.com
+                                hello@dsscode.com
                             </div>
 
                             <div className="flex items-center gap-3">
@@ -99,7 +68,7 @@ export default function Footer() {
 
                             <div className="flex items-center gap-3">
                                 <MapPin size={17} />
-                                Bandung, Indonesia
+                                Bandung Barat, Indonesia
                             </div>
 
                         </div>
@@ -107,35 +76,29 @@ export default function Footer() {
                     </div>
 
 
-                    {/* Product */}
+                    {/* Produk */}
 
                     <div>
 
-                        <h3 className="
-                            text-sm
-                            font-semibold
-                            text-slate-900
-                        ">
-                            Product
+                        <h3 className="text-sm font-semibold text-slate-900">
+                            Produk
                         </h3>
 
                         <ul className="mt-5 space-y-3">
 
                             {productLinks.map((link) => (
+
                                 <li key={link}>
 
                                     <a
                                         href="#"
-                                        className="
-                                            text-sm
-                                            text-slate-500
-                                            hover:text-slate-900
-                                        "
+                                        className="text-sm text-slate-500 hover:text-slate-900"
                                     >
                                         {link}
                                     </a>
 
                                 </li>
+
                             ))}
 
                         </ul>
@@ -143,35 +106,29 @@ export default function Footer() {
                     </div>
 
 
-                    {/* Company */}
+                    {/* Perusahaan */}
 
                     <div>
 
-                        <h3 className="
-                            text-sm
-                            font-semibold
-                            text-slate-900
-                        ">
-                            Company
+                        <h3 className="text-sm font-semibold text-slate-900">
+                            Perusahaan
                         </h3>
 
                         <ul className="mt-5 space-y-3">
 
                             {companyLinks.map((link) => (
+
                                 <li key={link}>
 
                                     <a
                                         href="#"
-                                        className="
-                                            text-sm
-                                            text-slate-500
-                                            hover:text-slate-900
-                                        "
+                                        className="text-sm text-slate-500 hover:text-slate-900"
                                     >
                                         {link}
                                     </a>
 
                                 </li>
+
                             ))}
 
                         </ul>
@@ -179,35 +136,29 @@ export default function Footer() {
                     </div>
 
 
-                    {/* Resources */}
+                    {/* Bantuan */}
 
                     <div>
 
-                        <h3 className="
-                            text-sm
-                            font-semibold
-                            text-slate-900
-                        ">
-                            Resources
+                        <h3 className="text-sm font-semibold text-slate-900">
+                            Bantuan
                         </h3>
 
                         <ul className="mt-5 space-y-3">
 
                             {resourceLinks.map((link) => (
+
                                 <li key={link}>
 
                                     <a
                                         href="#"
-                                        className="
-                                            text-sm
-                                            text-slate-500
-                                            hover:text-slate-900
-                                        "
+                                        className="text-sm text-slate-500 hover:text-slate-900"
                                     >
                                         {link}
                                     </a>
 
                                 </li>
+
                             ))}
 
                         </ul>
@@ -219,52 +170,27 @@ export default function Footer() {
 
                 {/* Bottom */}
 
-                <div className="
-                    mt-12
-                    flex
-                    flex-col
-                    gap-4
-                    border-t
-                    border-slate-200
-                    pt-7
-                    sm:flex-row
-                    sm:items-center
-                    sm:justify-between
-                ">
+                <div className="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-7 sm:flex-row sm:items-center sm:justify-between">
 
-                    <p className="
-                        text-xs
-                        text-slate-400
-                    ">
-                        © 2026 dsscode. All rights reserved.
+                    <p className="text-xs text-slate-400">
+                        © {new Date().getFullYear()} dsscode. Semua hak dilindungi.
                     </p>
 
 
-                    <div className="
-                        flex
-                        gap-5
-                    ">
+                    <div className="flex gap-5">
 
                         <a
                             href="#"
-                            className="
-                                text-xs
-                                text-slate-400
-                                hover:text-slate-700
-                            "
+                            className="text-xs text-slate-400 hover:text-slate-700"
                         >
-                            Privacy Policy
+                            Kebijakan Privasi
                         </a>
 
                         <a
                             href="#"
-                            className="
-                                text-xs
-                                text-slate-400
-                                hover:text-slate-700
-                            "
+                            className="text-xs text-slate-400 hover:text-slate-700"
                         >
-                            Terms of Service
+                            Syarat & Ketentuan
                         </a>
 
                     </div>

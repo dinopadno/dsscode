@@ -1,186 +1,131 @@
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
-
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="
-            fixed
-            top-0
-            z-50
-            w-full
-            border-b
-            border-slate-200/60
-            bg-white/80
-            backdrop-blur-xl
-        ">
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-100/80 bg-white/80 backdrop-blur-xl">
 
-            <div className="
-                mx-auto
-                flex
-                h-16
-                max-w-7xl
-                items-center
-                justify-between
-                px-5
-                lg:px-8
-            ">
+            <div className="mx-auto max-w-7xl px-5 lg:px-8">
 
-                {/* Logo */}
+                <div className="flex h-16 items-center justify-between">
 
-                <a href="#" className="flex items-center gap-2">
-                    <img src={logo} width="180" alt="logo" />
-                </a>
+                    {/* Logo */}
 
+                    <a href="#" className="flex items-center gap-2">
 
-                {/* Desktop Menu */}
+                        <img src={logo} width="190" alt="logo" />
 
-                <nav className="
-                    hidden
-                    items-center
-                    gap-8
-                    md:flex
-                ">
-
-                    <a
-                        href="#features"
-                        className="text-sm text-slate-600 hover:text-slate-900"
-                    >
-                        Features
                     </a>
 
-                    <a
-                        href="#how-it-works"
-                        className="text-sm text-slate-600 hover:text-slate-900"
-                    >
-                        How it works
-                    </a>
 
-                    <a
-                        href="#pricing"
-                        className="text-sm text-slate-600 hover:text-slate-900"
-                    >
-                        Pricing
-                    </a>
+                    {/* Desktop Navigation */}
 
-                    <a
-                        href="#faq"
-                        className="text-sm text-slate-600 hover:text-slate-900"
-                    >
-                        FAQ
-                    </a>
-
-                </nav>
-
-
-                {/* Desktop CTA */}
-
-                <div className="
-                    hidden
-                    items-center
-                    gap-3
-                    md:flex
-                ">
-
-                    <button className="
-                        px-4
-                        py-2
-                        text-sm
-                        font-medium
-                        text-slate-700
-                        hover:text-blue-600
-                    ">
-                        Login
-                    </button>
-
-                    <button className="
-                        rounded-xl
-                        bg-blue-600
-                        px-4
-                        py-2.5
-                        text-sm
-                        font-semibold
-                        text-white
-                        transition
-                        hover:bg-slate-800
-                    ">
-                        Get Started
-                    </button>
-
-                </div>
-
-
-                {/* Mobile */}
-
-                <button
-                    onClick={() => setOpen(!open)}
-                    className="md:hidden"
-                >
-                    {open
-                        ? <X size={24} />
-                        : <Menu size={24} />
-                    }
-                </button>
-
-            </div>
-
-
-            {open && (
-
-                <div className="
-                    border-t
-                    border-slate-200
-                    bg-white
-                    p-5
-                    md:hidden
-                ">
-
-                    <nav className="space-y-4">
+                    <nav className="hidden items-center gap-8 md:flex">
 
                         <a
-                            href="#features"
-                            className="block text-sm"
-                            onClick={() => setOpen(false)}
+                            href="#fitur"
+                            className="text-sm font-medium text-slate-600 transition hover:text-indigo-600"
                         >
-                            Features
+                            Fitur
                         </a>
 
                         <a
-                            href="#pricing"
-                            className="block text-sm"
-                            onClick={() => setOpen(false)}
+                            href="#cara-kerja"
+                            className="text-sm font-medium text-slate-600 transition hover:text-indigo-600"
                         >
-                            Pricing
+                            Cara Kerja
+                        </a>
+
+                        <a
+                            href="#harga"
+                            className="text-sm font-medium text-slate-600 transition hover:text-indigo-600"
+                        >
+                            Harga
                         </a>
 
                         <a
                             href="#faq"
-                            className="block text-sm"
-                            onClick={() => setOpen(false)}
+                            className="text-sm font-medium text-slate-600 transition hover:text-indigo-600"
                         >
                             FAQ
                         </a>
 
-                        <button className="
-                            w-full
-                            rounded-xl
-                            bg-blue-600
-                            py-3
-                            text-sm
-                            font-semibold
-                            text-white
-                        ">
-                            Get Started
+                    </nav>
+
+
+                    {/* Desktop CTA */}
+
+                    <div className="hidden items-center gap-3 md:flex">
+
+                        <button className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900">
+                            Login
                         </button>
 
-                    </nav>
+                        <button className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700">
+                            Mulai Gratis
+                        </button>
+
+                    </div>
+
+
+                    {/* Mobile Button */}
+
+                    <button
+                        onClick={() => setOpen(!open)}
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 md:hidden"
+                    >
+                        {open ? <X size={20} /> : <Menu size={20} />}
+                    </button>
 
                 </div>
 
-            )}
+
+                {/* Mobile Menu */}
+
+                {open && (
+                    <div className="border-t border-slate-100 py-4 md:hidden">
+
+                        <nav className="flex flex-col">
+
+                            {[
+                                ["Fitur", "#fitur"],
+                                ["Cara Kerja", "#cara-kerja"],
+                                ["Harga", "#harga"],
+                                ["FAQ", "#faq"],
+                            ].map(([label, href]) => (
+
+                                <a
+                                    key={label}
+                                    href={href}
+                                    onClick={() => setOpen(false)}
+                                    className="rounded-lg px-3 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+                                >
+                                    {label}
+                                </a>
+
+                            ))}
+
+                            <div className="mt-3 flex gap-2 border-t border-slate-100 pt-4">
+
+                                <button className="flex-1 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700">
+                                    Login
+                                </button>
+
+                                <button className="flex-1 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white">
+                                    Mulai Gratis
+                                </button>
+
+                            </div>
+
+                        </nav>
+
+                    </div>
+                )}
+
+            </div>
 
         </header>
     );

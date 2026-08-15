@@ -3,29 +3,29 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
     {
-        question: "Can I try the product for free?",
+        question: "Apakah saya bisa mencoba secara gratis?",
         answer:
-            "Yes. You can try all core features during the free trial period. No credit card is required to get started.",
+            "Ya. Anda dapat mencoba fitur utama secara gratis selama 14 hari. Anda tidak perlu memasukkan kartu kredit untuk memulai.",
     },
     {
-        question: "Is my business data secure?",
+        question: "Apakah data bisnis saya aman?",
         answer:
-            "Yes. We use modern security practices to protect your account and business data.",
+            "Ya. Kami menggunakan berbagai praktik keamanan untuk membantu melindungi akun dan data bisnis Anda.",
     },
     {
-        question: "Can I upgrade my plan later?",
+        question: "Apakah saya bisa mengganti paket?",
         answer:
-            "Absolutely. You can upgrade your subscription whenever your business needs more users or features.",
+            "Tentu. Anda dapat melakukan upgrade atau menyesuaikan paket sesuai dengan kebutuhan bisnis Anda.",
     },
     {
-        question: "Can I cancel anytime?",
+        question: "Apakah saya bisa berhenti kapan saja?",
         answer:
-            "Yes. There is no long-term contract. You can cancel your subscription whenever you want.",
+            "Ya. Tidak ada kontrak jangka panjang. Anda dapat membatalkan langganan kapan saja.",
     },
     {
-        question: "Does it work on mobile?",
+        question: "Apakah bisa digunakan melalui HP?",
         answer:
-            "Yes. The platform is designed to work across desktop, tablet and mobile devices.",
+            "Ya. Platform dirancang agar dapat digunakan melalui komputer, tablet, maupun smartphone.",
     },
 ];
 
@@ -34,45 +34,22 @@ export default function FAQ() {
     const [active, setActive] = useState(0);
 
     return (
-        <section
-            id="faq"
-            className="py-24"
-        >
+        <section id="faq" className="py-24">
 
-            <div className="
-                mx-auto
-                max-w-3xl
-                px-5
-                lg:px-8
-            ">
+            <div className="mx-auto max-w-3xl px-5 lg:px-8">
 
                 <div className="text-center">
 
-                    <p className="
-                        text-sm
-                        font-semibold
-                        uppercase
-                        tracking-wider
-                        text-indigo-600
-                    ">
-                        FAQ
+                    <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+                        Pertanyaan umum
                     </p>
 
-                    <h2 className="
-                        mt-3
-                        text-3xl
-                        font-bold
-                        tracking-tight
-                        sm:text-4xl
-                    ">
-                        Frequently asked questions
+                    <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                        Pertanyaan yang sering ditanyakan
                     </h2>
 
-                    <p className="
-                        mt-4
-                        text-slate-500
-                    ">
-                        Everything you need to know before getting started.
+                    <p className="mt-4 text-slate-500">
+                        Temukan jawaban atas pertanyaan umum mengenai platform kami.
                     </p>
 
                 </div>
@@ -87,70 +64,38 @@ export default function FAQ() {
                         return (
                             <div
                                 key={faq.question}
-                                className="
-                                    overflow-hidden
-                                    rounded-2xl
-                                    border
-                                    border-slate-200
-                                    bg-white
-                                "
+                                className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
                             >
 
                                 <button
                                     onClick={() =>
-                                        setActive(
-                                            isOpen
-                                                ? null
-                                                : index
-                                        )
+                                        setActive(isOpen ? null : index)
                                     }
-                                    className="
-                                        flex
-                                        w-full
-                                        items-center
-                                        justify-between
-                                        gap-5
-                                        px-5
-                                        py-5
-                                        text-left
-                                    "
+                                    className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left"
                                 >
 
-                                    <span className="
-                                        text-sm
-                                        font-semibold
-                                        text-slate-800
-                                    ">
+                                    <span className="text-sm font-semibold text-slate-800">
                                         {faq.question}
                                     </span>
 
-                                    {isOpen
-                                        ? (
-                                            <Minus
-                                                size={18}
-                                                className="shrink-0 text-indigo-600"
-                                            />
-                                        )
-                                        : (
-                                            <Plus
-                                                size={18}
-                                                className="shrink-0 text-slate-400"
-                                            />
-                                        )
-                                    }
+                                    {isOpen ? (
+                                        <Minus
+                                            size={18}
+                                            className="shrink-0 text-indigo-600"
+                                        />
+                                    ) : (
+                                        <Plus
+                                            size={18}
+                                            className="shrink-0 text-slate-400"
+                                        />
+                                    )}
 
                                 </button>
 
 
                                 {isOpen && (
 
-                                    <div className="
-                                        px-5
-                                        pb-5
-                                        text-sm
-                                        leading-6
-                                        text-slate-500
-                                    ">
+                                    <div className="px-5 pb-5 text-sm leading-6 text-slate-500">
                                         {faq.answer}
                                     </div>
 
